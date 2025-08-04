@@ -1,4 +1,4 @@
-# 🚀 CSS Tutorial Projects – CodeHelp by Babbar
+# 🚀 CSS Tutorial Projects :
 
 Welcome to my **CSS Tutorial Projects** repository! 🌐  
 This repo contains all the **CSS-based projects** I’m building while learning from the **CodeHelp** YouTube playlist by **Love Babbar**.
