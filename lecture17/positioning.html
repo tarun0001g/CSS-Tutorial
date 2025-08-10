@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           background-color: rgb(174, 224, 224);
+           border: solid black 1px;
+           position: relative;
+           height: 8000px;
+
+        }
+        .box{
+            border: solid rgb(97, 65, 65) 1px;
+            background-color: azure;
+            height: 5000px;
+
+        }
+        img{
+            margin: 10px;
+            
+
+        }
+        .def{
+            
+            position: absolute;
+            
+            /* in absolute positioning that particular element or page becomes overlapped by other element. in short particular element is hidden by other element*/
+            
+            
+
+
+        }
+        /* .def{
+            /* position: absolute;post 2 is loverlaping on post 1, when top=10, left=10 */
+/*            
+            top: 10px;
+            left: 10px; */
+            /* margin: 50px; , when position statement is not present then changes using left-right-top-bottom in any image or inline element is not applicable exept margin-padding-border statements  */
+        
+        .ghi{
+            position: sticky;
+            top: 10px;
+        }
+        .abc{
+            /* position:fixed; */
+        }
+
+        .jkl{
+            position: relative;
+            top: 0px;
+            right: 0px;
+
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <img src="img (1).JPG" alt="post 1"
+            width="300px";
+            heigh="300px";
+            class="abc";
+            />
+
+            <img src="img (2).JPG" alt="post 2"
+            width="300px";
+            heigh="300px";
+            class="def";
+            />
+
+            <img src="img (3).JPG" alt="post 3"
+            width="300px";
+            heigh="300px";
+            class="ghi";
+            />
+
+            <img src="img (4).JPG" alt="post 4"
+                width="300px";
+                heigh="300px";
+                class="jkl";
+            />
+
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>

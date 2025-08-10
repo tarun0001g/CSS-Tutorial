@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         :root{
+                --primary-color: rgb(255, 13, 13);
+                --custom-width:330px:
+            } /*this is declaration of variables which can be used in entire code with same value*/
+
+
+        .container{
+            background-color: beige;
+            border: solid var(--primary-color) 2px;
+            height: 650px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            --primary-color:rgb(235, 8, 114);
+            background-color: aquamarine;
+            border: solid var(--primary-color) 1px;
+            height: 330px;
+            width: 330px;
+            margin: 5px;
+            padding: 5px;
+            /*----BOX SHADOWS PROPERTY---*/
+            /* box-shadow: 15px 15px darkcyan;
+           */
+           /* box-shadow: -10px -15px 5px brown; */
+            /*x axis|y axis | blur radius| color */
+
+            /* box-shadow: 10px 5px 15px 15px rgba(10, 18, 2, 0.915); */
+            /*x axis|y axis | blur radius| spread radius|color */
+
+            /* box-shadow: inset 10px 10px rgb(177, 232, 13); */
+
+            /* box-shadow: 5px 8px chartreuse, 8px 12px rosybrown; */
+            /*multiple shadows */
+        }
+
+        #abc{
+            /*----TEXT-SHADOW PROPERTY----*/
+             /* text-shadow: 2px 1px 1px darkgreen; */
+            /* text-shadow: 5px 3px darkkhaki; */
+            text-shadow: darkgrey 12px 13px 3px;
+            /* text-shadow: 23px 22px; */
+        }
+
+        img{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="codehelp logo.png">
+            <h2 id="abc">Welcome to tarun's webpage</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti temporibus maiores nemo, facere consequatur fuga esse! Ad pariatur tenetur expedita sit, provident vitae unde .</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation ka gyaan</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .container{
+            background-color: beige;
+            border: 7px solid black;
+            box-sizing:border-box;
+            height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+        }
+        .box1{
+            /*----WE WANT TO ADD ANIMATION OF MOVING THIS BOX FROM LEFT TO RIGHT----*/
+            width: 350px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: blue;
+            border-radius: 8px;
+            margin: 8px;
+            position: relative;
+            /* to move the box to right side*/ 
+            /* animation-name: rightMovement;
+            animation-duration: 5s;
+            animation-iteration-count:infinite;
+            animation-delay: 1s; */
+            /*to adjust timming of animation we can use this function*/
+            /* animation-timing-function:linear;
+
+            animation-direction: alternate;
+            animation-fill-mode:forwards;  */
+
+
+            /*----SHORTHAND NOTATION FOR ANIMATION-----*/
+            /* animation:  duration timing-function delay iteration-count direction fill-mode name; */
+            animation: 5s linear 1s infinite alternate-reverse none rightMovement ;
+
+        }
+        
+        @keyframes rightMovement{
+            from{
+                top:0;
+                left:0;
+            }
+            to{
+                top:0;
+                left: 1150px;
+            }
+        }
+        .circle{
+             width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            background-color: blue;
+            border-radius: 50px;
+            margin: 8px;
+            position: relative;
+            top:35%;
+            left: 650px;
+             animation: 15s linear 1s infinite alternate both circleMovement ;
+        }
+         @keyframes circleMovement{
+            0%{
+                top:1%;
+                left:5%;
+            }
+            30%{
+                top:1%;
+                left:90%;
+            }
+            60%{
+                top:70%;
+                left:5%;
+            }
+            90%{
+                top:70%;
+                left:90%;
+            }
+            120%{
+                top: 1%;
+                left: 5%;
+            }
+        }
+         .box2{
+            width: 350px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: blue;
+            border-radius: 8px;
+            margin: 8px;
+            position: relative;
+            animation: 5s linear 1s infinite alternate forwards leftMovement;
+        }
+         @keyframes leftMovement{
+            from{
+                top:520px;
+                left:1150px;
+            }
+            to{
+                top:520px;
+                left: 0px;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"> </div>
+        <div class="circle"></div>
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

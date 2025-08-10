@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: beige;
+            border: solid black 4px;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            height: 2000px;
+            /*when i add flex then this container becomes flex element 
+            the by default direction of flex is row direction there is also more properties :*/
+
+            /*------FLEX DIRECTION CONCEPT-----*/
+            /* flex-direction: column;  all boxes will  directed in column wise  */
+
+            /* flex-direction: row; */
+            /* flex-direction: column-reverse; */
+
+            /*-----FLEX WRAP CONCEPT------*/
+            /*without flex-wrap boxes width and height are changing while cheching responsiveness */
+            /* flex-wrap: wrap; now responsivness of wegpage will behave like boxess wil be arranged automatically in next line */
+            /* flex-wrap: nowrap;/*boxes will be not moved in nexxt line */
+            /* flex-wrap: wrap-reverse; boxes will be moved in above line in reverse order  */
+            
+            /* ------JUSTIFY CONCEPT FOR HORIZONTAL MAIN AXIS (FLEX DIRECRION = RAW)*/
+             flex-direction: row; 
+            /* justify-content: center;  */
+            /*the content place will be changed horiontally - center, start,end */ 
+            /* justify-content: space-between; */
+            /*first and last boxe are placed at the end of main box, and space is equal between rest of all boxes */
+            /* justify-content: space-around; */
+            /*in space around the space wil be equal on both sides(left and right ) of boxe,for all boxes */
+            /* justify-content: space-evenly; */
+            /*all boxes will have exactly same space on both side */
+
+            /*----JUSTIFY CONCEPT FOR VERTICAL MAIN AXIS (FLEX DIRECTIO = COLUMN WISE)----*/
+            /* flex-direction: column;
+            justify-content: center;
+            justify-content: end;
+            justify-content: start;
+            justify-content: space-between;
+            justify-content:space-around ;same space on both side for all boxes (up & down)
+            justify-content: space-evenly;same space betweenn all boxes
+            justify-content: start;  */
+            
+            /*---ALIGN ITEMS PROPERTY----*/
+            /*this property works in cross direction of flex direction*/
+            /* align-items: center;
+            align-items: end;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: first baseline; */
+
+
+            /*COMBINATION OF ALIGN ITEMS AND JUSTIFY CONTENT*/
+        
+            /* justify-content: center ;
+            justify-content: end;
+            justify-content: start;
+             */
+
+            /* align-items: stretch; see the result remove the hieght of the boxe */
+            
+            /* align-items: center;
+            justify-content: center; BOXES WILL COMES IN TTHE CENTER OF THE WEBPAGE */
+
+            
+                /*ALIGN CONTENT PROPERTY*/
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: start;
+            align-content: end;/*TO HANDLE THE SPACES BETWEEN LINES OF CONTENT WHILE CHANGING RESPONSIVENESS*/
+
+
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            border: solid brown 1px;
+             margin: 2px;
+            padding: 2px;
+        }
+
+
+        #box1{
+            background-color: aqua;
+        }
+        #box2{
+            background-color: blue;
+        }
+        #box3{
+            background-color: blueviolet;
+        }
+        #box4{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>
