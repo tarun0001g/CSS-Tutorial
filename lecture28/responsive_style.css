@@ -1,0 +1,66 @@
+ *{
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+
+    }
+    .container{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(57, 55, 55);
+        display: grid;/*To make any container as a grid*/
+        padding: 4rem;
+    
+        row-gap: 1rem;
+        column-gap: 1rem; 
+        /* gap: 1rem; */
+    
+
+
+        /* ----TO MAKE THESE ELEMENTS IN 2D (in rows and columns )---*/ 
+
+        /* grid-template-rows: 100px 100px ;
+        grid-template-columns: 100px 100px 100px ; */
+
+     /*----WE CAN ALSO WRITE THEM AS ----*/
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .item{
+        background-color: rgb(22, 22, 131);
+        border: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        color: rgb(139, 117, 89);
+    }
+
+    @media (min-width:750px){
+        /*----means:The styles inside will only apply if the screen width is 750px or more (like on tablets or desktops).
+    This helps make your layout responsive.----/
+
+            /*----FOR MAKING WEBPAGE MORE RESPONSIVE LAYOUT ----*/
+    .container{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3,1fr);
+    }
+    .header, .footer{
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .sidebar{
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .content1{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive grid design</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: rgb(72, 70, 70);
+            
+            display: grid;
+            gap: 1rem;
+            padding: 4rem;
+
+            /* -----WITHOUT ANY RESPONSIVE FEATURE THE PAGE IS SHRINKIING WITH ITS ITEMS ---- */
+            /* grid-template-columns: repeat(3, 1fr); */
+
+            /*++++ WE CAN MAKE THE PAGE RESPONSIVE WITHOUT USING MEDIA QUERY AND LENGTH CODES++++ */
+
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 500px) ); */
+            /* --minmax(min, max) is a function used to set the minimum and maximum sizes of a column or row.--- */
+            /* ---auto-fit automatically creates as many columns as will fit in the container.--- */
+
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            /* auto-fill creates as many columns as will fit,each at least 200px wide, and leaves empty slots if space is left */
+            
+        }
+        .item{
+            background-color: rgb(124, 31, 31);
+            border: 3px solid black;
+            padding: 3px;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <!-- <div class="item">L</div>
+        <div class="item">M</div>
+        <div class="item">N</div>
+        <div class="item">O</div>
+        <div class="item">P</div> -->
+    </div>
+
+</body>
+</html>

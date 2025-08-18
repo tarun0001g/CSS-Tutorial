@@ -1,0 +1,139 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.navcontainer{
+    width: 100%;
+    min-height: 80px;
+    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+nav{
+    width: 100%;
+}
+
+#navlist{
+    width: 100%;
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+#navlogo{
+    font-size: 2rem;
+    color: black;
+    margin-left: 25px;
+}
+#navitems{
+    display: flex;
+    gap: 30px;
+    padding-right: 15px;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+.mainBox{
+    width: 70%;
+    background-color: white;
+    /* border: 1px solid rgb(112, 7, 42);  */
+    margin: auto;/*---margin auto used for placing item in center---*/
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 1.5rem;
+    /* --OFFSET-X| OFFSET-Y| BLUR RADIOUS| COLOR--- */
+    box-shadow: 0px 0px 30px black;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+}
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.leftBox h2{
+    font-size: 1.7rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#ingBox{
+    font-size: 1.2rem;
+}
+#recipeBox{
+    font-size: 1.2rem;
+}
+
+ /* WE WANT TO MAKE ONE OVERLAP LAYER OF (TAP TO BUY) ON IMAG WHILE HOVERING */
+.rightBox{
+    /* TO OVERLAP ANY BOX OR ELEMET WITH OTHER ITEM , FIRST WE NEED TO MAKE IT POSITION RELATIVE */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s linear 0s;
+    box-shadow: 1px 1px 10px #21212d;
+    border-radius: 20px;
+}
+.rightBox .overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 33, 33, 0.681);
+    color: whitesmoke;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s linear 0s;
+}
+.rightBox .overlay span{
+    color: white;
+    font-size: medium;
+    font-weight: 200;
+}
+.rightBox .overlay:hover{
+    opacity: 1;
+}
+.rightBox img{
+    height: 400px;
+    border-radius: 20px;
+    /* property name | duration | easing function | delay */
+    transition: all 1s linear 0s ;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+    
+}
+.rightBox:hover{
+    transform: scale(1.15);
+}
+
+.footerBox{
+        background: #C9FFBF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 35px;
+    text-align: center;
+}
+.footerBox p{
+    font-size: 1.6rem;
+    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+}
